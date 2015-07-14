@@ -4,15 +4,17 @@ URxvt.saveLines: 1000
 URxvt.scrollBar: false
 #The font inconsolata is in the official repos!
 URxvt.font: xft:inconsolata:pixelsize=18
-
 #These two are for cool transparency
 URxvt*depth: 32
 URxvt*background: rgba:0000/0000/0200/c800
 
 #URL Launcher stuff
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
+URxvt.matcher.rend.0: Uline Bold fg5
 
 #Color scheme
-
 ! special
 *.foreground:   #dfcaca
 *.background:   #170909
