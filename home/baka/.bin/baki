@@ -29,6 +29,6 @@ if (ARGV[0] == '-S' || ARGV[0] == '-R') && worked
   else
     f.write "#Removed:\n"
   end
-  f.write "#{ARGV[1..-1].join('\n')}\n"
+  f.write "#{ARGV[1..-1].join("\n")}\n"
   f.close
 end
