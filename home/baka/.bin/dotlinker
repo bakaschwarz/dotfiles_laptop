@@ -1,0 +1,52 @@
+#!/usr/bin/ruby
+
+require 'fileutils'
+
+$extra_command = :append
+if ARGV[0] == '-o'
+  $extra_command = :overwrite
+  ARGV.shift
+end
+
+$linker_input = ARGV[0]
+if $linker_input[-1] == '/'
+  $linker_input = $linker_input[0..-2]
+end
+
+$linker_destination = ARGV[1]
+if $linker_destination == '/'
+  $linker_destination[0..-2]
+end
+
+def linker folder
+  if File.directory? folder
+    Dir.foreach(folder) do |entry|
+      unless entry == '.' || entry == '..'
+        if File.directory? ((another_folder = folder + '/' + entry))
+          linker another_folder
+        else
+          new_folder_path = $linker_destination + folder[$linker_input.length .. -1]
+          new_file_path = new_folder_path  + '/' + entry
+          unless File.directory? new_folder_path
+            FileUtils.mkdir_p new_folder_path
+          end
+          if $extra_command == :overwrite
+            if File.exist? new_file_path
+              puts "Overwriting file #{new_file_path}..."
+              File.delete new_file_path
+            end
+            FileUtils.symlink folder + '/' + entry, new_file_path
+          else
+            if File.exist? new_file_path
+              puts "File #{new_file_path} already exists... - Skipping"
+            else
+              FileUtils.symlink folder + '/' + entry, new_file_path
+            end
+          end
+        end
+      end
+    end
+  end
+end
+
+linker $linker_input

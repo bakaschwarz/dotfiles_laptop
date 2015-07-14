@@ -20,7 +20,9 @@ xset -dpms && xset s noblank && xset s off
 ~/.bin/wmfix.sh
 
 #Start the panel.
-bmpanel2
+bmpanel2 &
+
+urxvt &
 
 #Starts the shortcut manager.
 sxhkd &
