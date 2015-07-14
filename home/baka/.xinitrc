@@ -1,3 +1,6 @@
+#Set the keyboard layout to german.
+setxkbmap de
+
 #Start the audio server.
 pulseaudio --start
 
@@ -5,7 +8,7 @@ pulseaudio --start
 xsetroot -cursor_name left_ptr
 
 #Start the composite manager for better video performance
-compton -c -bzCG --backend glx --dbe --vsync opengl-swc --paint-on-overlay --mark-wmwin-focused --no-fading-openclose
+#compton -c -bzCG --backend glx --dbe --vsync opengl-swc --paint-on-overlay --mark-wmwin-focused --no-fading-openclose
 
 #Set a random wallpaper from the whole wallpaper folder.
 #feh --bg-scale $(echo -n "~/.wallpaper/")$(ls -l ~/.wallpaper | tail -n +2 | awk '{print $9}' | sort -R | tail -n 1)
@@ -17,18 +20,16 @@ feh --bg-scale ~/.wallpaper/current/current_wallpaper
 xset -dpms && xset s noblank && xset s off
 
 #Solve the root window problem with bspwm and JAVA Swing.
-~/.bin/wmfix.sh
+wmfix
 
 #Start the panel.
-bmpanel2 &
-
-urxvt &
+#bmpanel2 &
 
 #Starts the shortcut manager.
 sxhkd &
 
 #Start powersaver functions to reduce power consume on a laptop.
-upower -e
+#upower -e
 
 #Start a window manager.
 exec bspwm

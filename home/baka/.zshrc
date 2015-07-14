@@ -1,6 +1,6 @@
-PROMPT=%#
-export PROMPT
-archey3
+#PROMPT=%#
+#export PROMPT
+#archey3
 
 ###########
 # Aliases #
