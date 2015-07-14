@@ -4,8 +4,9 @@
 use_aur = false
 worked  = false
 
-if ARGV.shift == '-ya'
-  use_aur = true
+if ARGV[0] == '-ya'
+   ARGV.shift
+   use_aur = true
 end
 
 unless ARGV.empty?

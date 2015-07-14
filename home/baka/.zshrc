@@ -23,4 +23,4 @@ function twitschi {
 #Of cource vim is our default editor in the shell!
 EDITOR=vim
 #So that the path to ruby gems is in $PATH
-PATH=$PATH:~/.gem/ruby/2.2.0/bin
+PATH=$PATH:~/.gem/ruby/2.2.0/bin:~/.bin
