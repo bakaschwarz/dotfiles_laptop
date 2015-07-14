@@ -1,0 +1,33 @@
+#!/usr/bin/ruby
+# A wrapper for pacman and/or yaourt to create a history of explicit installed packages.
+
+use_aur = false
+worked  = false
+
+if ARGV.shift == '-ya'
+  use_aur = true
+end
+
+unless ARGV.empty?
+  if use_aur
+    worked = system "yaourt #{ARGV[0..-1].join(' ')}"
+  else
+    worked = system "sudo pacman #{ARGV[0..-1].join(' ')}"
+  end
+else
+  puts "No arguments given. Not doing anything."
+end
+
+if (ARGV[0] == '-S' || ARGV[0] == '-R') && worked
+  unless File.exist? '~/.baki_history'
+    system 'touch ~/.baki_history'
+  end
+  f = File.open "#{Dir.home}/.baki_history", 'a+'
+  if ARGV[0] == '-S'
+    f.write "#Installed:\n"
+  else
+    f.write "#Removed:\n"
+  end
+  f.write "#{ARGV[1..-1].join('\n')}\n"
+  f.close
+end

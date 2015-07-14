@@ -1,0 +1,4 @@
+#!/usr/bin/ruby
+`scrot -s /tmp/screenshot.png`
+link = `curl -i -F name=bakablack.png -F file=@/tmp/screenshot.png "http://uguu.se/api.php?d=upload" | tail -n 1`
+`chromium #{link}`

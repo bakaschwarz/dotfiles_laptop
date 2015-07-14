@@ -1,0 +1,15 @@
+#History is important and we like to go way back!
+URxvt.saveLines: 1000
+#Why are you even asking?
+URxvt.scrollBar: false
+#The font inconsolata is in the official repos!
+URxvt.font: xft:inconsolata:pixelsize=18
+
+#These two are for cool transparency
+URxvt*depth: 32
+URxvt*background: rgba:0000/0000/0200/c800
+
+#URL Launcher stuff
+
+#Color scheme
+
