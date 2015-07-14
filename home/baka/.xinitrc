@@ -8,7 +8,7 @@ pulseaudio --start
 xsetroot -cursor_name left_ptr
 
 #Start the composite manager for better video performance
-#compton -c -bzCG --backend glx --dbe --vsync opengl-swc --paint-on-overlay --mark-wmwin-focused --no-fading-openclose
+compton -c -bzCG --backend glx --dbe --vsync opengl-swc --paint-on-overlay --mark-wmwin-focused --no-fading-openclose
 
 #Set a random wallpaper from the whole wallpaper folder.
 #feh --bg-scale $(echo -n "~/.wallpaper/")$(ls -l ~/.wallpaper | tail -n +2 | awk '{print $9}' | sort -R | tail -n 1)
