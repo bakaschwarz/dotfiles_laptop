@@ -13,3 +13,39 @@ URxvt*background: rgba:0000/0000/0200/c800
 
 #Color scheme
 
+! special
+*.foreground:   #dfcaca
+*.background:   #170909
+*.cursorColor:  #dfcaca
+
+! black
+*.color0:       #231011
+*.color8:       #509f57
+
+! red
+*.color1:       #2f1819
+*.color9:       #dfacae
+
+! green
+*.color2:       #472728
+*.color10:      #5f9b9a
+
+! yellow
+*.color3:       #683b3c
+*.color11:      #ca79c7
+
+! blue
+*.color4:       #915457
+*.color12:      #ad9a5d
+
+! magenta
+*.color5:       #b9777a
+*.color13:      #479593
+
+! cyan
+*.color6:       #ceaaab
+*.color14:      #9eb7e3
+
+! white
+*.color7:       #ebe0e0
+*.color15:      #e8525b
