@@ -101,7 +101,7 @@ super + space
 	dmenu_run
 
 super + a
-	chromium
+	firefox
 
 XF86MonBrightnessUp
 	xbacklight -inc 20
