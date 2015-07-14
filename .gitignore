@@ -1,4 +1,6 @@
-# Ignore VIM temp files
+#VIM temp files
 *~
 *.swp
 *.swo
+# Log files
+*.log
