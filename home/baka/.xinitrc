@@ -23,7 +23,7 @@ xset -dpms && xset s noblank && xset s off
 wmfix
 
 #Start the panel.
-bmpanel2 &
+bmpanel2 --theme=classie_bmpanel &
 
 #Starts the shortcut manager.
 sxhkd &
