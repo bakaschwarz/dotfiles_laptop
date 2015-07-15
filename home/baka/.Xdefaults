@@ -6,7 +6,7 @@ URxvt.scrollBar: false
 URxvt.font: xft:inconsolata:pixelsize=18
 #These two are for cool transparency
 URxvt*depth: 32
-URxvt*background: rgba:0000/0000/0200/c800
+URxvt*background: [97]#130505
 
 #URL Launcher stuff
 URxvt.perl-ext-common: default,matcher
@@ -16,37 +16,37 @@ URxvt.matcher.rend.0: Uline Bold fg5
 
 #Color scheme
 ! special
-*.foreground:   #dfcaca
-*.background:   #170909
-*.cursorColor:  #dfcaca
+*.foreground:   #FFC6B0
+*.background:   #130505
+*.cursorColor:  #FFC6B0
 
 ! black
-*.color0:       #231011
-*.color8:       #509f57
+*.color0:       #0C0B0B
+*.color8:       #1B1213
 
 ! red
-*.color1:       #2f1819
-*.color9:       #dfacae
+*.color1:       #610909
+*.color9:       #F11F1D
 
 ! green
-*.color2:       #472728
-*.color10:      #5f9b9a
+*.color2:       #FF9F49
+*.color10:      #F3A05E
 
 ! yellow
-*.color3:       #683b3c
-*.color11:      #ca79c7
+*.color3:       #E48F46
+*.color11:      #B15519
 
 ! blue
-*.color4:       #915457
-*.color12:      #ad9a5d
+*.color4:       #C95316
+*.color12:      #C4B046
 
 ! magenta
-*.color5:       #b9777a
-*.color13:      #479593
+*.color5:       #5A373B
+*.color13:      #78484E
 
 ! cyan
-*.color6:       #ceaaab
-*.color14:      #9eb7e3
+*.color6:       #574C4D
+*.color14:      #7A7374
 
 ! white
 *.color7:       #ebe0e0
