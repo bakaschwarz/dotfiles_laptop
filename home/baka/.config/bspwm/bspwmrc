@@ -11,4 +11,4 @@ bspc config focus_by_distance		true
 
 bspc config focus_follows_pointer	true
 
-bspc monitor eDP1 -d · ·· ··· ···· ·····
+bspc monitor eDP1 -d eins zwei drei vier fünf

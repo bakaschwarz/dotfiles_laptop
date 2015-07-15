@@ -1,0 +1,61 @@
+theme
+	name tokisaki
+	author bakaschwarz <https://github.com/bakaschwarz>
+	
+panel
+	position top
+	background background_tile.png
+
+desktop_switcher
+	idle
+		stretched
+		left idle_switcher_left.png
+		right idle_switcher_right.png
+		center background_tile.png
+		right_corner idle_switcher_right.png
+		left_corner idle_switcher_left.png
+		font Inconsolata 14
+			color 87 76 77
+			align center
+	pressed
+		stretched
+		left pressed_switcher_left.png
+		right pressed_switcher_right.png
+		right_corner pressed_switcher_right.png
+		left_corner pressed_switcher_left.png
+		center highlight.png
+		font Inconsolata 14
+			color 255 198 176
+			align center
+
+taskbar
+	idle
+		strechted
+		left background_tile.png
+		right background_tile.png
+		center background_tile.png
+		font Inconsolata 10
+			color 87 76 77
+			align center
+	pressed
+		stretched
+		left highlight_tasks.png
+		right highlight_tasks.png
+		center highlight_tasks.png
+		font Inconsolata 10
+			color 241 31 29
+			align center
+empty 10
+
+systray
+	icon_size 14 14
+	
+empty 10
+
+clock
+	font Inconsolata 14
+		color 255 198 176
+		align center
+	time_format %A, %d.%m.%y | %H:%M
+
+empty 20
