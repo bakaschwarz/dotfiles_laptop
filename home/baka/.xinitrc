@@ -32,4 +32,5 @@ sxhkd &
 #upower -e
 
 #Start a window manager.
+#exec openbox-session
 exec bspwm
