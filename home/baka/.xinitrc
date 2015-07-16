@@ -32,5 +32,4 @@ sxhkd &
 #upower -e
 
 #Start a window manager.
-#exec bspwm
 exec bspwm
