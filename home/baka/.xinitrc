@@ -16,6 +16,9 @@ compton -c -bzCG --backend glx --dbe --vsync opengl-swc --paint-on-overlay --mar
 #Set a fixed wallpaper from a syslink in the current wallpaper folder.
 feh --bg-scale ~/.wallpaper/current/current_wallpaper
 
+#Start the desktop widget
+conky -c .conky/desktop_widget &
+
 #Disable display sleep, etc.
 xset -dpms && xset s noblank && xset s off
 
