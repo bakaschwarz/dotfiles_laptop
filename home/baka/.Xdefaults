@@ -38,7 +38,7 @@ URxvt.matcher.rend.0: Uline Bold fg5
 
 ! blue
 *.color4:       #C95316
-*.color12:      #C4B046
+*.color12:      #FFFE93
 
 ! magenta
 *.color5:       #5A373B
