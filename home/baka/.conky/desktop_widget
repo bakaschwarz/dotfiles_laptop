@@ -12,11 +12,10 @@ no_buffers yes
 
 # Text Settings
 use_xft yes
-xftalpha 0.5
-xftfont inconsolata:size=128
+#xftalpha 0.9
+xftfont opensans:size=128
 override_utf8_locale yes
 text_buffer_size 2048
-
 
 # Window Settings
 
@@ -30,8 +29,8 @@ own_window_argb_value 128
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 
 alignment top_left
-gap_x 200
-gap_y 700
+gap_x 150
+gap_y 750
 
 TEXT
-${alignc}${time %H:%M}
+${color #68363C}${alignc}${time %H:%M}${color}
