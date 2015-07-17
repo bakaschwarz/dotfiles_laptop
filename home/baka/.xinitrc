@@ -28,6 +28,9 @@ wmfix
 #Start the panel.
 bmpanel2 --theme=kurumi_tokisaki &
 
+#Start the notification watcher for mpd.
+mpd-notification -p 5500 &
+
 #Starts the shortcut manager.
 sxhkd &
 
