@@ -3,7 +3,7 @@ URxvt.saveLines: 1000
 #Why are you even asking?
 URxvt.scrollBar: false
 #The font inconsolata is in the official repos!
-URxvt.font: xft:inconsolata:pixelsize=18
+URxvt.font: xft:inconsolata:pixelsize=12
 #These two are for cool transparency
 URxvt*depth: 32
 URxvt*background: [97]#130505
