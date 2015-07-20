@@ -1,0 +1,128 @@
+#
+# bspwm hotkeys
+#
+
+super + shift + e
+	bspc quit
+
+super + w
+	bspc window -c
+
+super + t
+	bspc desktop -l next
+
+super + b
+	bspc desktop -B
+
+super + {s,f}
+	bspc window -t {floating,fullscreen}
+
+super + {grave,Tab}
+	bspc {window,desktop} -f last
+
+super + apostrophe
+	bspc window -s last
+
+super + m
+	bspc window -s biggest
+
+super + {h,j,k,l}
+	bspc window -s {left,down,up,right}
+
+super + {_,shift + }c
+	bspc window -f {next,prev}
+
+super + {comma,period}
+	bspc desktop -C {backward,forward}
+
+super + bracket{left,right}
+	bspc desktop -f {prev,next}
+
+super + shift + {h,j,k,l}
+	bspc window -p {left,down,up,right}
+
+super + ctrl + {_,shift + }space
+	bspc {window -p cancel,desktop -c}
+
+super + alt + {h,j,k,l}
+	bspc window -e {left -10,down +10,up -10,right +10}
+
+super + alt + shift + {h,j,k,l}
+	bspc window -e {right -10,up +10,down -10,left +10}
+
+super + ctrl + {1-9}
+	bspc window -r 0.{1-9}
+
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,window -d} ^{1-9,10}
+
+# change window gap at run time
+super + KP_Add
+    bspc config -d focused window_gap $((`bspc config -d focused window_gap` + 5 ))
+
+# Restore original gap
+super + equal
+    bspc config top_padding 24; bspc config -d focused window_gap 16
+
+super + KP_Subtract
+    bspc config -d focused window_gap $((`bspc config -d focused window_gap` - 5 ))
+
+# Remove gap
+super + KP_Insert
+    bspc config top_padding 24; bspc config -d focused window_gap 16
+
+#Switch between width modes
+super + KP_Delete
+	bspc config right_padding {6,260}
+
+XF86Calculator
+	bspc config focus_follows_pointer {false,true}
+
+~button1
+	bspc pointer -g focus
+
+super + button{1-3}
+	bspc pointer -g {move,resize_side,resize_corner}
+
+super + !button{1-3}
+	bspc pointer -t %i %i
+
+super + @button{1-3}
+	bspc pointer -u
+
+#
+# wm independent hotkeys
+#
+
+super + Return
+	urxvt
+
+super + space
+	dmenu_run
+
+super + a
+	firefox
+
+XF86MonBrightnessUp
+	xbacklight -inc 20
+
+XF86MonBrightnessDown
+	xbacklight -dec 20
+
+XF86MyComputer
+	pcmanfm
+
+super + e
+	visual-studio-code
+
+#Wallpaper wählen
+super + F12
+	mirage /home/baka/.wallpaper/*
+
+#Super cool recording stuff!
+super + F7
+	ruby /home/baka/bin/pomfvid.rb {start,end}
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
