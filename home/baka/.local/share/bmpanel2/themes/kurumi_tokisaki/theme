@@ -1,7 +1,7 @@
 theme
 	name tokisaki
 	author bakaschwarz <https://github.com/bakaschwarz>
-	
+
 panel
 	position top
 	background background_tile.png
@@ -49,7 +49,7 @@ empty 10
 
 systray
 	icon_size 14 14
-	
+
 empty 10
 
 clock
