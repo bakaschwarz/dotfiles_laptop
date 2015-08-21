@@ -15,6 +15,8 @@ alias wlan="/bin/sudo /usr/bin/dhcpcd wlp4s0"
 alias syu="/bin/sudo /bin/pacman -Syu"
 alias ix="/bin/curl -F 'f:1=<-' ix.io"
 alias ls='ls --color=auto'
+alias shutup="systemctl poweroff"
+alias reboot="systemctl reboot"
 
 #It's cool not to go to the site everytime you want to watch a stream.
 function twitschi {
